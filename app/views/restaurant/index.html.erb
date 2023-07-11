@@ -1,0 +1,10 @@
+<h1 class="mb-4">Restaurants</h1>
+
+ <div class="list-group">
+   <% @restaurants.each do |restaurant| %>
+     <a href="<%= restaurant_path(restaurant) %>" class="list-group-item list-group-item-action">
+       <h3 class="mb-1"><%= restaurant.name %></h3>
+       <p class="mb-1"><%= restaurant.address %></p>
+     </a>
+   <% end %>
+ </div>

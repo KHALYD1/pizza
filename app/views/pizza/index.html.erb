@@ -1,0 +1,10 @@
+<h1 class="mb-4">Pizzas</h1>
+
+ <ul class="list-group">
+   <% @pizzas.each do |pizza| %>
+     <li class="list-group-item">
+       <h3><%= pizza.name %></h3>
+       <p><%= pizza.ingredients %></p>
+     </li>
+   <% end %>
+ </ul>

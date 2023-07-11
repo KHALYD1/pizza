@@ -1,0 +1,18 @@
+<h1 class="mb-4">New Restaurant Pizza</h1>
+
+ <% if @restaurant_pizza.errors.any? %>
+   <div class="alert alert-danger">
+     <ul>
+       <% @restaurant_pizza.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+       <% end %>
+     </ul>
+   </div>
+ <% else %>
+   <div class="alert alert-success">
+     <h2>Pizza Added Successfully!</h2>
+     <p>Details:</p>
+     <h3><%= @pizza.name %></h3>
+     <p><%= @pizza.ingredients %></p>
+   </div>
+ <% end %>
